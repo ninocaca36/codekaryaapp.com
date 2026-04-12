@@ -1,0 +1,344 @@
+ <x-app-layout>
+      <!-- Our Services-->
+      <section class="section section-lg text-center novi-bg novi-bg-img">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInUp">Our Services</span></h3>
+          <p class="wow-outer"><span class="text-width-1 wow slideInDown">We provide a variety of marketing and promotion services to enable you and your business with innovative tools and strategies and attract more customers.</span></p>
+          <div class="row row-50 row-xxl-70 offset-top-2">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft">
+                <div class="box-light-icon novi-icon fl-bigmug-line-flag53"></div>
+                <h4 class="box-light-title">Branding</h4>
+                <p>Whether you’re looking to launch a brand or you just need help clarifying your message, we can help you.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".05s">
+                <div class="box-light-icon novi-icon fl-bigmug-line-equalization3"></div>
+                <h4 class="box-light-title">Strategy</h4>
+                <p>Our experts can help you develop your marketing strategy and integrate it into your advertising campaign.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".1s">
+                <div class="box-light-icon novi-icon fl-bigmug-line-video163"></div>
+                <h4 class="box-light-title">Video Production</h4>
+                <p>Need a professional advertising video for your campaign? We can offer anything you need.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".15s">
+                <div class="box-light-icon novi-icon fl-bigmug-line-file69"></div>
+                <h4 class="box-light-title">Copywriting</h4>
+                <p>Our experienced copywriters will gladly provide you with high-quality texts for your websites or advertisements.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft">
+                <div class="box-light-icon novi-icon fl-bigmug-line-share27"></div>
+                <h4 class="box-light-title">SMM</h4>
+                <p>We can develop a simple social media marketing plan designed specifically for your business and your needs.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".05s">
+                <div class="box-light-icon novi-icon fl-bigmug-line-store10"></div>
+                <h4 class="box-light-title">Outdoor Advertising</h4>
+                <p>If you need to create your next out-of-home campaign or lease your space, we can satisfy your needs.​</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".1s">
+                <div class="box-light-icon novi-icon box-light-title fl-bigmug-line-square160"></div>
+                <h4 class="box-light-title">Graphic Design</h4>
+                <p>Our graphic design services include printing brochures, banners and logos for your advertising campaign.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Box Light-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".15s">
+                <div class="box-light-icon novi-icon fl-bigmug-line-megaphone11"></div>
+                <h4 class="box-light-title">Marketing</h4>
+                <p>This service includes a variety of promotional techniques and methods that can boost your company’s products.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- A Few Words About Us-->
+      <section class="section section-lg bg-gray-100 novi-bg novi-bg-img">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-6 col-xl-5">
+              <h3 class="wow-outer"><span class="wow slideInDown">A Few Words About Us</span></h3>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">We are a team of talented marketers who happen to love creating smart ideas for those who will have us. We use our creative potential to provide the smartest ideas.</span></p>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".1s">We have a wide range of experience, expertise and tools to create and implement your campaigns, from carefully curating awesome content to optimising it with our great SEO powers as well as outdoor marketing skills.</span></p>
+              <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="#">Learn more</a></div>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer"><img class="img-responsive wow slideInRight" src="{{ asset('frontend/images/large-features-2-570x368.jpg') }}" alt="" width="570" height="368"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Thin-->
+      <section class="section section-xs bg-primary-darker text-center novi-bg novi-bg-img">
+        <div class="container">
+          <div class="row row-fix justify-content-center">
+            <div class="col-sm-10 col-md-12">
+              <div class="box-cta-thin">
+                <h4 class="wow-outer"><span class="wow slideInRight">Learn the Cost of your <span class="font-weight-bold">Marketing Campaign</span> Right Now!</span></h4><a class="button button-primary button-winona" href="pricing.html">View all pricing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Who We Are-->
+      <section class="section section-lg section-last text-center bg-default novi-bg novi-bg-img" data-preset='{"title":"Team 3 Column Layout","category":"team","id":"team-3-column-layout"}'>
+        <div class="container">
+          <h3 class="wow-outer text-center"><span class="wow slideInDown">Who We Are</span></h3>
+          <div class="row row-30">
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Profile Minimal-->
+              <article class="profile-minimal wow slideInLeft"><img class="profile-minimal-image" src="{{ asset('frontend/images/team-2-370x368.jpg') }}" alt="" width="370" height="368"/>
+                <div class="profile-minimal-caption">
+                  <h4 class="profile-minimal-title">Jean Thompson</h4>
+                  <p class="profile-minimal-position">Project Manager</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Profile Minimal-->
+              <article class="profile-minimal wow slideInLeft" data-wow-delay=".05s"><img class="profile-minimal-image" src="{{ asset('frontend/images/team-3-370x368.jpg') }}" alt="" width="370" height="368"/>
+                <div class="profile-minimal-caption">
+                  <h4 class="profile-minimal-title">Brian Payne</h4>
+                  <p class="profile-minimal-position">PR Manager</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer"> 
+              <!-- Profile Minimal-->
+              <article class="profile-minimal wow slideInLeft" data-wow-delay=".1s"><img class="profile-minimal-image" src="{{ asset('frontend/images/team-1-370x368.jpg') }}" alt="" width="370" height="368"/>
+                <div class="profile-minimal-caption">
+                  <h4 class="profile-minimal-title">Nathan Porter</h4>
+                  <p class="profile-minimal-position">CEO, Founder</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp" href="#">View all Team</a></div>
+        </div>
+      </section>
+      <!-- Testimonials-->
+      <section class="section section-lg bg-gray-100 novi-bg novi-bg-img">
+        <div class="container">
+          <h3 class="text-center">Testimonials</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-5">
+              <div class="owl-carousel" data-items="1" data-dots="true" data-nav="false" data-loop="true" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
+                <div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft"><img src="{{ asset('frontend/images/quote-35x25.png') }}" alt="" width="35" height="25"/>
+                    <div class="quote-modern-text">
+                      <p>Marketic is, hands down, one of the best companies that we have worked with! The company has either met or exceeded all of the goals that we initially set for all of the projects that they implemented for us. I am sure that our company will partner with them again in the future.</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="{{ asset('frontend/images/testimonials-person-3-96x96.jpg') }}" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Albert Webb</cite>
+                        <p class="quote-modern-caption">CEO at Majestic</p>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft"><img src="{{ asset('frontend/images/quote-35x25.png') }}" alt="" width="35" height="25"/>
+                    <div class="quote-modern-text">
+                      <p>Marketic team provides us with a full service digital marketing service that encompasses social media, demand generation, digital advertising, search engine optimization, email and marketing automation that has increased our visibility and inbound lead generation.</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="{{ asset('frontend/images/testimonials-person-1-96x96.jpg') }}" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Kelly McMillan</cite>
+                        <p class="quote-modern-caption">Private Entrepreneur</p>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft"><img src="{{ asset('frontend/images/quote-35x25.png') }}" alt="" width="35" height="25"/>
+                    <div class="quote-modern-text">
+                      <p>We rely on Marketic for its digital marketing expertise, particularly in the areas of SEO and social media marketing. Their team is knowledgeable, responsive and committed to supporting our initiatives, making them invaluable partners in our effort to promote our company.</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="{{ asset('frontend/images/testimonials-person-2-96x96.jpg') }}" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Harold Barnett</cite>
+                        <p class="quote-modern-caption">Regional Manager</p>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <div class="thumbnail-video-1 bg-gray-700 wow slideInLeft">
+                <div class="thumbnail-video-toggle" data-custom-toggle=".video-overlay"></div>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="570" height="320" src="//www.youtube.com/embed/QZzbm-FrkGk" allowfullscreen=""></iframe>
+                </div>
+                <div class="thumbnail-video__overlay video-overlay bg-cover" style="background-image: url({{ asset('frontend/images/video-preview-1-570x320.jpg') }})">
+                  <div class="button-video"></div>
+                  <h5>Lawrence Alvarado</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing-->
+      <section class="section section-lg text-center novi-bg novi-bg-img">
+        <div class="container">
+          <h3>Pricing</h3>
+          <p><span class="text-width-1">In this section, you can learn more about available pricing plans and included services. Even if you own a small business and don’t need a great marketing campaign, we have what to offer.</span></p>
+          <div class="pricing-group-modern wow-outer">
+            <!-- Pricing Modern-->
+            <article class="pricing-modern wow fadeInLeft">
+              <ul class="pricing-modern-rating">
+                <li class="mdi mdi-star-outline"></li>
+              </ul>
+              <h5 class="pricing-modern-title"><a href="single-service.html">Basic</a></h5>
+              <ul class="pricing-modern-table">
+                <li>Analysis & Research</li>
+                <li>Brand Management</li>
+                <li>CTA Marketing</li>
+              </ul>
+              <p class="pricing-modern-price"><span class="pricing-modern-price-currency">$</span>789.00</p><a class="button button-primary button-winona" href="single-service.html">Order Now</a>
+            </article>
+            <!-- Pricing Modern-->
+            <article class="pricing-modern wow fadeInLeft" data-wow-delay=".05s">
+              <ul class="pricing-modern-rating">
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+              </ul>
+              <h5 class="pricing-modern-title"><a href="single-service.html">Standard</a></h5>
+              <ul class="pricing-modern-table">
+                <li>Sales Growth</li>
+                <li>Email Marketing</li>
+                <li>SEO</li>
+              </ul>
+              <p class="pricing-modern-price"><span class="pricing-modern-price-currency">$</span>1299.00</p><a class="button button-primary button-winona" href="single-service.html">Order Now</a>
+            </article>
+            <!-- Pricing Modern-->
+            <article class="pricing-modern wow fadeInLeft" data-wow-delay=".1s">
+              <ul class="pricing-modern-rating">
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+              </ul>
+              <h5 class="pricing-modern-title"><a href="single-service.html">Advanced</a></h5>
+              <ul class="pricing-modern-table">
+                <li>Online Marketing</li>
+                <li>SMM</li>
+                <li>Web Design</li>
+              </ul>
+              <p class="pricing-modern-price"><span class="pricing-modern-price-currency">$</span>2369.00</p><a class="button button-primary button-winona" href="single-service.html">Order Now</a>
+            </article>
+            <!-- Pricing Modern-->
+            <article class="pricing-modern wow fadeInLeft" data-wow-delay=".15s">
+              <ul class="pricing-modern-rating">
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+                <li class="mdi mdi-star-outline"></li>
+              </ul>
+              <h5 class="pricing-modern-title"><a href="single-service.html">Ultimate</a></h5>
+              <ul class="pricing-modern-table">
+                <li>Marketing Strategy</li>
+                <li>Graphic Design</li>
+                <li>Content Creation</li>
+              </ul>
+              <p class="pricing-modern-price"><span class="pricing-modern-price-currency">$</span>6790.00</p><a class="button button-primary button-winona" href="single-service.html">Order Now</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Wide CTA-->
+      <section class="section section-md bg-primary-darker text-center novi-bg novi-bg-img" data-preset='{"title":"Wide CTA","category":"cta","id":"wide-cta"}'>
+        <div class="container">
+          <div class="box-cta-1">
+            <h3 class="wow-outer"><span class="wow slideInRight">We Offer Quality <span class="font-weight-bold">Branding and Promotion</span></span></h3>
+            <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInLeft" href="#">Free consultation</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest Blog Posts-->
+      <section class="section section-lg text-center novi-bg novi-bg-img">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInDown">Latest Blog Posts</span></h3>
+          <div class="row row-30">
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="single-blog-post.html"><img src="{{ asset('frontend/images/grid-blog-1-571x353.jpg') }}" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a href="single-blog-post.html">10 Digital Marketing Mistakes to Avoid</a></h4>
+                <ul class="post-modern-meta">
+                  <li>by Theresa Barnes</li>
+                  <li>
+                    <time datetime="2019">Apr 21, 2019 at 12:05 pm</time>
+                  </li>
+                  <li><a class="button-winona" href="#">News</a></li>
+                </ul>
+                <p>Though managing your digital marketing campaign may seem easy, you can encounter some complexities, which usually lead to mistakes and a bad promotion effect.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="single-blog-post.html"><img src="{{ asset('frontend/images/grid-blog-2-571x353.jpg') }}" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a href="single-blog-post.html">Where Marketers Need to Succeed</a></h4>
+                <ul class="post-modern-meta">
+                  <li>by Theresa Barnes</li>
+                  <li>
+                    <time datetime="2019">Apr 21, 2019 at 12:05 pm</time>
+                  </li>
+                  <li><a class="button-winona" href="#">News</a></li>
+                </ul>
+                <p>Being a successful marketer today might appear to require a never-ending list of skills. Where do you need to excel -- content creation, social media, web analytics, or all of the above?</p>
+              </article>
+            </div>
+          </div>
+          <div class="wow-outer button-outer"><a class="button button-primary-outline button-winona wow slideInUp" href="#">View all Blog posts</a></div>
+        </div>
+      </section>
+      <!-- Newsletter-->
+     <!-- Newsletter-->
+      <section class="section section-lg bg-gray-100 novi-bg novi-bg-img" data-preset='{"title":"Newsletter Form","category":"contacts","reload":true,"id":"newsletter-form"}'>
+          <div class="container">
+            <div class="row row-fix justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6">
+                <h3 class="wow-outer text-center"><span class="wow slideInUp">Newsletter</span></h3>
+                <p class="wow-outer"><span class="wow slideInLeft">Keep up with our always upcoming news and updates. Enter your e-mail and subscribe to our newsletter.</span></p>
+                <!-- RD Mailform-->
+                <form class="rd-form rd-mailform form-inline wow fadeIn" data-wow-delay=".2s" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap">
+                    <input class="form-input" id="subscribe-form-1-email" type="email" name="email" data-constraints="@@Email @@Required">
+                    <label class="form-label" for="subscribe-form-1-email">Your e-mail</label>
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-primary button-winona" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </section>
+ </x-app-layout>   
+    
+  
