@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+
+  # PHP Application
+  app:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    image: codekarya-app
+    container_name: codekarya-app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+    networks:
+      - codekarya-network
+
+  # Nginx Web Server
+  webserver:
+    image: nginx:alpine
+    container_name: codekarya-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./src:/var/www
+      - ./src/docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - codekarya-network
+
+  # MySQL Database
+  db:
+      image: mysql:8.0
+      container_name: codekarya-db
+      restart: unless-stopped
+      tty: true
+      ports:
+        - "3306:3306"
+      environment:
+        MYSQL_DATABASE: ${DB_DATABASE:-codekarya_db}
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root_password}
+        MYSQL_PASSWORD: ${DB_PASSWORD:-root_password}
+        MYSQL_USER: ${DB_USERNAME:-codekarya_user}
+        SERVICE_TAGS: dev
+        SERVICE_NAME: mysql
+      networks:
+        - codekarya-network
+
+networks:
+  codekarya-network:
+    driver: bridge
