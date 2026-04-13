@@ -74,16 +74,25 @@
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
               </li>
-              @if (Route::has('login'))
-                  @auth
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
-                  @else
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('login') }}">Login</a></li>
-                      @if (Route::has('register'))
-                          <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('register') }}">Register</a></li>
-                      @endif
-                  @endauth
-              @endif
+              @guest
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('login') }}">Login</a></li>
+                  @if (Route::has('register'))
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('register') }}">Register</a></li>
+                  @endif
+              @else
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">{{ auth()->user()->name }}</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Profile</a></li>
+                      <li class="rd-dropdown-item">
+                        <a class="rd-dropdown-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form-frontend').submit();">Logout</a>
+                        <form id="logout-form-frontend" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                        </form>
+                      </li>
+                    </ul>
+                  </li>
+              @endguest
             </ul>
           </div>
           <!-- RD Navbar Search-->
