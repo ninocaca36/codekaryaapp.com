@@ -16,6 +16,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::resource('services', \App\Http\Controllers\Backend\ServiceController::class);
+    Route::get('/visitors', [\App\Http\Controllers\Backend\VisitorController::class, 'index'])->name('visitors.index');
 });
 
 Route::middleware('auth')->group(function () {

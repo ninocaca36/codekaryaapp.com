@@ -47,6 +47,16 @@
                     </li>
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->
+            <!-- Analytics -->
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Analytics</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item {{ Request::is('visitors*') ? 'active' : '' }}">
+                <a href="{{ route('visitors.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-activity-round-fill"></em></span>
+                    <span class="nk-menu-text">Statistik Pengunjung</span>
+                </a>
+            </li><!-- .nk-menu-item -->
         </ul><!-- .nk-menu -->
     </div>
     <!-- End: Main Menu Dashboards -->

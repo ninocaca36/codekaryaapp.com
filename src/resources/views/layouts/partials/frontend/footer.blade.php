@@ -59,8 +59,61 @@
             <li class="object-inline"><span class="icon icon-md mdi mdi-email text-gray-700"></span><a class="link-default" href="mailto:#">info@demolink.org</a></li>
           </ul>
         </div>
+      </div><!-- .row -->
+
+      <!-- Visitor Counter Widget -->
+      @php
+        use Shetabit\Visitor\Models\Visit;
+        $footerTotalVisits   = Visit::count();
+        $footerTodayVisits   = Visit::whereDate('created_at', \Carbon\Carbon::today())->count();
+        $footerUniqueVisitors = Visit::distinct('ip')->count('ip');
+      @endphp
+      <div class="row mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.08);">
+        <div class="col-12">
+          <h6 class="mb-3" style="color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;">Statistik Pengunjung</h6>
+          <div class="d-flex flex-wrap gap-4">
+            <!-- Total Visits -->
+            <div class="d-flex align-items-center gap-2">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(101,118,255,0.15); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 1rem;">👁️</span>
+              </div>
+              <div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1;">
+                  {{ number_format($footerTotalVisits) }}
+                </div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.45);">Total Kunjungan</div>
+              </div>
+            </div>
+            <!-- Today Visits -->
+            <div class="d-flex align-items-center gap-2">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(15,172,129,0.15); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 1rem;">📅</span>
+              </div>
+              <div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1;">
+                  {{ number_format($footerTodayVisits) }}
+                </div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.45);">Hari Ini</div>
+              </div>
+            </div>
+            <!-- Unique Visitors -->
+            <div class="d-flex align-items-center gap-2">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,190,55,0.15); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 1rem;">🌐</span>
+              </div>
+              <div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1;">
+                  {{ number_format($footerUniqueVisitors) }}
+                </div>
+                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.45);">IP Unik</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <!-- /Visitor Counter Widget -->
+
+    </div><!-- .container -->
   </div>
   <div class="footer-linked-aside">
     <div class="container">
