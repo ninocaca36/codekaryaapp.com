@@ -58,6 +58,23 @@
                     <span class="nk-menu-text">Statistik Pengunjung</span>
                 </a>
             </li><!-- .nk-menu-item -->
+
+            <!-- Video Tools -->
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Video Tools</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item {{ Request::is('video-tools*') ? 'active' : '' }}">
+                <a href="{{ route('video-tools.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-play-fill"></em></span>
+                    <span class="nk-menu-text">Video Cutter</span>
+                </a>
+            </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item {{ Request::is('audio-tools*') ? 'active' : '' }}">
+                <a href="{{ route('audio-tools.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-mic-fill"></em></span>
+                    <span class="nk-menu-text">Audio Transcriber</span>
+                </a>
+            </li><!-- .nk-menu-item -->
             @endhasanyrole
         </ul><!-- .nk-menu -->
     </div>

@@ -22,7 +22,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/roles-permissions', [\App\Http\Controllers\Backend\RolePermissionController::class, 'index'])->name('roles-permissions.index');
     Route::post('/roles', [\App\Http\Controllers\Backend\RolePermissionController::class, 'storeRole'])->name('roles.store');
     Route::post('/permissions', [\App\Http\Controllers\Backend\RolePermissionController::class, 'storePermission'])->name('permissions.store');
-    Route::post('/assign-permissions', [\App\Http\Controllers\Backend\RolePermissionController::class, 'assignPermission'])->name('assign-permissions');
+    // Video Tools
+    Route::get('/video-tools', [\App\Http\Controllers\Backend\VideoToolController::class, 'index'])->name('video-tools.index');
+    Route::post('/video-tools/cut', [\App\Http\Controllers\Backend\VideoToolController::class, 'cut'])->name('video-tools.cut');
+
+    // Audio Tools
+    Route::get('/audio-tools', [\App\Http\Controllers\Backend\AudioToolController::class, 'index'])->name('audio-tools.index');
+    Route::post('/audio-tools/transcribe', [\App\Http\Controllers\Backend\AudioToolController::class, 'transcribe'])->name('audio-tools.transcribe');
 });
 
 Route::middleware('auth')->group(function () {
