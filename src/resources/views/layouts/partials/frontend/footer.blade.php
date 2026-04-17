@@ -52,11 +52,11 @@
             <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a class="link-default" href="#">2130 Fulton Street San Diego, CA <br> 94117-1080 USA</a></li>
             <li class="object-inline"><span class="icon icon-md mdi mdi-phone text-gray-700"></span>
               <ul class="list-0">
-                <li><a class="link-default" href="tel:#">1-800-1234-678</a></li>
-                <li><a class="link-default" href="tel:#">1-800-8765-098</a></li>
+                <li><a class="link-default" href="tel:#">+62 889-7320-8501</a></li>
+                <li><a class="link-default" href="tel:#"></a></li>
               </ul>
             </li>
-            <li class="object-inline"><span class="icon icon-md mdi mdi-email text-gray-700"></span><a class="link-default" href="mailto:#">info@demolink.org</a></li>
+            <li class="object-inline"><span class="icon icon-md mdi mdi-email text-gray-700"></span><a class="link-default" href="mailto:#">codekaryaapp@gmail.com</a></li>
           </ul>
         </div>
       </div><!-- .row -->
