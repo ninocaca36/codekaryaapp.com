@@ -10,6 +10,7 @@
                 </a>
             </li><!-- .nk-menu-item -->
 
+            @hasanyrole('superadmin|admin')
             <!-- User Management -->
             <li class="nk-menu-heading">
                 <h6 class="overline-title text-primary-alt">User Management</h6>
@@ -24,7 +25,7 @@
                         <a href="{{ route('users.index') }}" class="nk-menu-link"><span class="nk-menu-text">User List</span></a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="#" class="nk-menu-link"><span class="nk-menu-text">Roles & Permission</span></a>
+                        <a href="{{ route('roles-permissions.index') }}" class="nk-menu-link"><span class="nk-menu-text">Roles & Permission</span></a>
                     </li>
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->
@@ -57,10 +58,12 @@
                     <span class="nk-menu-text">Statistik Pengunjung</span>
                 </a>
             </li><!-- .nk-menu-item -->
+            @endhasanyrole
         </ul><!-- .nk-menu -->
     </div>
     <!-- End: Main Menu Dashboards -->
 
+    @hasanyrole('superadmin|admin')
     <!-- Placeholder for other Apps -->
     <div class="nk-menu-content" data-content="navApps">
         <h5 class="title">System Tools</h5>
@@ -79,4 +82,5 @@
             </li>
         </ul>
     </div>
+    @endhasanyrole
 </div>

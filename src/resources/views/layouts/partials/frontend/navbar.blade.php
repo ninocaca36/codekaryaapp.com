@@ -14,65 +14,34 @@
             <ul class="rd-navbar-nav">
               <li class="rd-nav-item {{ Request::is('/') ? 'active' : '' }}"><a class="rd-nav-link" href="{{ url('/') }}">Home</a>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Karya</a>
                 <ul class="rd-menu rd-navbar-dropdown">
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="services.html">Services</a>
-                  </li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-service.html">Single Service</a>
-                  </li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Musik</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Film</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Podcast</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Video Pendek</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Semua Karya Digital</a></li>
+                </ul>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Jasa Aplikasi</a>
+                <ul class="rd-menu rd-navbar-dropdown">
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Web Development</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Mobile App Development</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Sistem Informasi</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Landing Page</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Maintenance & Support</a></li>
+                </ul>
+              </li>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">About</a>
+                <ul class="rd-menu rd-navbar-dropdown">
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Tentang Kami</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Aturan Main & Membership</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Visi & Misi</a></li>
                 </ul>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="blog.html">Blog</a>
-                <ul class="rd-menu rd-navbar-dropdown">
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-blog-post.html">Single Blog Post</a>
-                  </li>
-                </ul>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                <ul class="rd-menu rd-navbar-dropdown">
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="404-page.html">404 Page</a>
-                  </li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="search-results.html">Search results</a>
-                  </li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="privacy-policy.html">Privacy policy</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Elements</a>
-                <ul class="rd-menu rd-navbar-megamenu">
-                  <li class="rd-megamenu-item">
-                    <h6 class="rd-megamenu-title"><a href="#">Elements 1</a></h6>
-                    <ul class="rd-megamenu-list">
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="headers.html">Headers</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="footers.html">Footers</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="breadcrumbs.html">Breadcrumbs</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="contact-forms.html">Contact Forms</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="subscribe-forms.html">Subscribe Forms</a></li>
-                    </ul>
-                  </li>
-                  <li class="rd-megamenu-item">
-                    <h6 class="rd-megamenu-title"><a href="#">Elements 2</a></h6>
-                    <ul class="rd-megamenu-list">
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="calls-to-action.html">Calls to Action</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="screens.html">Screens</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maps.html">Maps</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="blog-layouts.html">Blog Layouts</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team.html">Team</a></li>
-                    </ul>
-                  </li>
-                  <li class="rd-megamenu-item">
-                    <h6 class="rd-megamenu-title"><a href="#">Elements 3</a></h6>
-                    <ul class="rd-megamenu-list">
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="galleries.html">Galleries</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-albums.html">Gallery Albums</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Testimonials</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                      <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="blogs.html">Blogs</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Kontak</a>
               </li>
               @guest
                   <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('login') }}">Login</a></li>
