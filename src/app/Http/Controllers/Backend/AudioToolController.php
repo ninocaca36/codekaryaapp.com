@@ -16,8 +16,11 @@ class AudioToolController extends Controller
 
     public function transcribe(Request $request)
     {
+        // Increase execution time to 10 minutes for long audio
+        set_time_limit(600);
+
         $request->validate([
-            'audio' => 'required|mimes:mp3,wav,ogg,m4a,flac,mp4|max:50000', // 50MB
+            'audio' => 'required|mimes:mp3,wav,ogg,m4a,flac,mp4|max:200000', // 200MB
         ]);
 
         if (!$request->hasFile('audio')) {
