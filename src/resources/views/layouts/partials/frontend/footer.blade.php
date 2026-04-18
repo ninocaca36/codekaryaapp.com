@@ -49,7 +49,7 @@
           <h4>Contact Information</h4>
           <hr>
           <ul class="list-sm">
-            <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a class="link-default" href="#">2130 Fulton Street San Diego, CA <br> 94117-1080 USA</a></li>
+            <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a class="link-default" href="#">10158 bekasi jabar<br> indonesia</a></li>
             <li class="object-inline"><span class="icon icon-md mdi mdi-phone text-gray-700"></span>
               <ul class="list-0">
                 <li><a class="link-default" href="tel:#">+62 889-7320-8501</a></li>

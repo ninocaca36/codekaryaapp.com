@@ -6,7 +6,8 @@ use App\Http\Controllers\Backend\UserController;
 
 Route::get('/', function () {
     $services = \App\Models\Service::where('is_active', true)->orderBy('order')->get();
-    return view('frontend', compact('services'));
+    $latestPosts = \App\Models\Post::with('author')->latest()->take(2)->get();
+    return view('frontend', compact('services', 'latestPosts'));
 });
 
 // Public Creative Space Routes
@@ -49,7 +50,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/my-profile', [\App\Http\Controllers\Backend\UserProfileController::class, 'show'])->name('user.profile');
     Route::post('/my-profile/update', [\App\Http\Controllers\Backend\UserProfileController::class, 'update'])->name('user.profile.update');
 
-    Route::resource('blog', \App\Http\Controllers\Backend\BlogController::class);
+    Route::resource('manage-blog', \App\Http\Controllers\Backend\BlogController::class)->names('blog');
 });
 
 Route::middleware('auth')->group(function () {

@@ -42,9 +42,9 @@
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Visi & Misi</a></li>
                 </ul>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="blog.html">Blog</a>
+              <li class="rd-nav-item {{ Request::is('blog*') ? 'active' : '' }}"><a class="rd-nav-link" href="{{ route('frontend.blog.index') }}">Blog</a>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Kontak</a>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Kontak</a>
               </li>
               @guest
                   <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('login') }}">Login</a></li>

@@ -1,13 +1,14 @@
 <!-- Swiper Slider-->
 <section class="section page-header page-header-navbar bg-gray-700" data-preset='{"title":"Header With Slider","category":"headers","reload":true,"id":"header-with-slider"}'>
-    <div class="swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="false" data-simulate-touch="true">
+    <div class="swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="5000" data-simulate-touch="true">
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide_video">
           <div class="vide_bg novi-vide" data-vide-bg="{{ asset('frontend/video/city') }}" data-vide-options="posterType: jpg">
             <div class="swiper-slide-caption">
               <div class="container">
                 <div class="swiper-slide-text">
-                  <div class="text-large">Dedicated to results</div>
+                  <div class="text-large">Hargai Setiap Karya Digital Anda</div>
+                  <p class="text-white" style="font-size: 20px;">Codekarya hadir untuk memberikan apresiasi nyata bagi setiap kreativitas yang lahir.</p>
                 </div>
               </div>
             </div>
@@ -17,7 +18,8 @@
           <div class="swiper-slide-caption">
             <div class="container">
               <div class="swiper-slide-text">
-                <div class="text-large">Solutions made easy</div>
+                <div class="text-large">Wadah Kreativitas Tanpa Batas</div>
+                <p class="text-white" style="font-size: 20px;">Tempat terbaik untuk memamerkan Musik, Film, dan Podcast karya anak bangsa.</p>
               </div>
             </div>
           </div>
@@ -26,7 +28,8 @@
           <div class="swiper-slide-caption">
             <div class="container">
               <div class="swiper-slide-text">
-                <div class="text-large">The Best on the market</div>
+                <div class="text-large">Ekosistem Sosial Kreatif</div>
+                <p class="text-white" style="font-size: 20px;">Berbagi, mendukung, dan tumbuh bersama dalam satu komunitas digital yang solid.</p>
               </div>
             </div>
           </div>
