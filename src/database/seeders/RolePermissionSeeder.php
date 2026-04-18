@@ -91,8 +91,14 @@ class RolePermissionSeeder extends Seeder
                 [
                     'name' => $userData['name'],
                     'password' => Hash::make('password123'),
+                    'email_verified_at' => now(),
                 ]
             );
+
+            // Pastikan user yang sudah ada juga terverifikasi
+            if (!$user->email_verified_at) {
+                $user->update(['email_verified_at' => now()]);
+            }
 
             $user->assignRole($userData['role']);
         }
