@@ -104,6 +104,12 @@
                     <span class="nk-menu-text">Diamond Store</span>
                 </a>
             </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item {{ Request::is('blog*') ? 'active' : '' }}">
+                <a href="{{ route('blog.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-file-text"></em></span>
+                    <span class="nk-menu-text">Blog Management</span>
+                </a>
+            </li><!-- .nk-menu-item -->
             @endhasanyrole
         </ul><!-- .nk-menu -->
     </div>

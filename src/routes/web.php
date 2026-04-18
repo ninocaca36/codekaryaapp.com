@@ -13,6 +13,8 @@ Route::get('/', function () {
 Route::get('/karya/video-ser', [\App\Http\Controllers\FrontendMusicController::class, 'videoSer'])->name('frontend.music.index');
 Route::get('/karya/karaoke', [\App\Http\Controllers\FrontendMusicController::class, 'karaoke'])->name('frontend.music.karaoke');
 Route::get('/karya/podcast', [\App\Http\Controllers\FrontendPodcastController::class, 'index'])->name('frontend.podcast.index');
+Route::get('/blog', [\App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
+Route::get('/blog/{slug}', [\App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
@@ -46,6 +48,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // User Profile
     Route::get('/my-profile', [\App\Http\Controllers\Backend\UserProfileController::class, 'show'])->name('user.profile');
     Route::post('/my-profile/update', [\App\Http\Controllers\Backend\UserProfileController::class, 'update'])->name('user.profile.update');
+
+    Route::resource('blog', \App\Http\Controllers\Backend\BlogController::class);
 });
 
 Route::middleware('auth')->group(function () {
