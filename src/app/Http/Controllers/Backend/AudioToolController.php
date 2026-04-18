@@ -16,11 +16,11 @@ class AudioToolController extends Controller
 
     public function transcribe(Request $request)
     {
-        // Increase execution time to 10 minutes for long audio
+        // Increase execution time for API request
         set_time_limit(600);
 
         $request->validate([
-            'audio' => 'required|mimes:mp3,wav,ogg,m4a,flac,mp4|max:200000', // 200MB
+            'audio' => 'required|mimes:mp3,wav,ogg,m4a,flac,mp4|max:25000', // OpenAI limit is 25MB
         ]);
 
         if (!$request->hasFile('audio')) {
@@ -28,34 +28,37 @@ class AudioToolController extends Controller
         }
 
         $file = $request->file('audio');
-        $filename = time() . '_' . $file->getClientOriginalName();
-        $path = $file->storeAs('audio/temp', $filename, 'public');
-        $inputPath = storage_path('app/public/' . $path);
         
-        // Path to python script
-        $scriptPath = base_path('scripts/transcribe.py');
-        
-        // Execute Python script
-        // We use python command. Make sure python is in PATH.
-        $command = "python \"$scriptPath\" \"$inputPath\"";
-        
-        $result = Process::run($command);
-
-        // Cleanup uploaded file
-        // Storage::disk('public')->delete($path);
-
-        if ($result->successful()) {
-            $transcription = trim($result->output());
+        try {
+            $apiKey = env('OPENAI_API_KEY');
             
-            if (str_starts_with($transcription, 'Error:')) {
-                return back()->with('error', $transcription);
+            if (!$apiKey || $apiKey == 'sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx') {
+                return back()->with('error', 'OpenAI API Key belum dikonfigurasi di file .env');
             }
 
-            return back()->with('success', 'Transcription completed!')
-                         ->with('transcription', $transcription)
-                         ->with('filename', $file->getClientOriginalName());
-        }
+            // Call OpenAI Whisper API
+            $response = \Illuminate\Support\Facades\Http::withToken($apiKey)
+                ->timeout(300)
+                ->attach('file', file_get_contents($file->path()), $file->getClientOriginalName())
+                ->post('https://api.openai.com/v1/audio/transcriptions', [
+                    'model' => 'whisper-1',
+                    'language' => 'id',
+                    'response_format' => 'text'
+                ]);
 
-        return back()->with('error', 'Failed to transcribe audio: ' . $result->errorOutput());
+            if ($response->successful()) {
+                $transcription = trim($response->body());
+                
+                return back()->with('success', 'Transkripsi Berhasil (via OpenAI Whisper)!')
+                             ->with('transcription', $transcription)
+                             ->with('filename', $file->getClientOriginalName());
+            }
+
+            $errorData = $response->json();
+            return back()->with('error', 'OpenAI API Error: ' . ($errorData['error']['message'] ?? 'Unknown error'));
+
+        } catch (\Exception $e) {
+            return back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
     }
 }

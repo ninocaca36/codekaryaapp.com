@@ -40,6 +40,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'diamonds' => 100, // Saldo awal untuk user baru
         ]);
 
         $user->assignRole('user');

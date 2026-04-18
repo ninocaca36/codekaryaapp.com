@@ -9,6 +9,12 @@
                     <span class="nk-menu-text">Default Dashboard</span>
                 </a>
             </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item {{ Request::is('my-profile*') ? 'active' : '' }}">
+                <a href="{{ route('user.profile') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-user-fill"></em></span>
+                    <span class="nk-menu-text">My Profile</span>
+                </a>
+            </li><!-- .nk-menu-item -->
 
             @hasanyrole('superadmin|admin')
             <!-- User Management -->
@@ -73,6 +79,29 @@
                 <a href="{{ route('audio-tools.index') }}" class="nk-menu-link">
                     <span class="nk-menu-icon"><em class="icon ni ni-mic-fill"></em></span>
                     <span class="nk-menu-text">Audio Transcriber</span>
+                </a>
+            </li><!-- .nk-menu-item -->
+
+            <!-- Creative Space -->
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Creative Space</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item {{ Request::is('music-space*') ? 'active' : '' }}">
+                <a href="{{ route('music.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-music"></em></span>
+                    <span class="nk-menu-text">Music & Karaoke</span>
+                </a>
+            </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item {{ Request::is('podcast-space*') ? 'active' : '' }}">
+                <a href="{{ route('podcast.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-mic"></em></span>
+                    <span class="nk-menu-text">Podcast Space</span>
+                </a>
+            </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item {{ Request::is('diamond-store*') ? 'active' : '' }}">
+                <a href="{{ route('store.index') }}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-cart"></em></span>
+                    <span class="nk-menu-text">Diamond Store</span>
                 </a>
             </li><!-- .nk-menu-item -->
             @endhasanyrole

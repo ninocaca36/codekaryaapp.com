@@ -30,6 +30,7 @@
                         <div class="nk-tb-item nk-tb-head">
                             <div class="nk-tb-col"><span class="sub-text">User</span></div>
                             <div class="nk-tb-col tb-col-mb"><span class="sub-text">Role</span></div>
+                            <div class="nk-tb-col tb-col-md"><span class="sub-text">Diamonds</span></div>
                             <div class="nk-tb-col tb-col-md"><span class="sub-text">Email Verified</span></div>
                             <div class="nk-tb-col tb-col-lg"><span class="sub-text">Created At</span></div>
                             <div class="nk-tb-col nk-tb-col-tools text-end">
@@ -50,15 +51,22 @@
                                 </div>
                             </div>
                             <div class="nk-tb-col tb-col-mb">
-                                @foreach($user->roles as $role)
-                                    <span class="badge badge-outline-primary text-capitalize">{{ $role->name }}</span>
-                                @endforeach
+                                @if($user->roles->count() > 0)
+                                    @foreach($user->roles as $role)
+                                        <span class="badge badge-pill badge-outline-primary text-capitalize">{{ $role->name }}</span>
+                                    @endforeach
+                                @else
+                                    <span class="badge badge-pill badge-outline-light">No Role</span>
+                                @endif
+                            </div>
+                            <div class="nk-tb-col tb-col-md">
+                                <span class="fw-bold text-primary"><em class="icon ni ni-diamond"></em> {{ $user->diamonds ?? 0 }}</span>
                             </div>
                             <div class="nk-tb-col tb-col-md">
                                 @if($user->email_verified_at)
-                                    <span class="text-success">Verified</span>
+                                    <span class="badge badge-dot bg-success">Verified</span>
                                 @else
-                                    <span class="text-danger">Unverified</span>
+                                    <span class="badge badge-dot bg-danger">Unverified</span>
                                 @endif
                             </div>
                             <div class="nk-tb-col tb-col-lg">
