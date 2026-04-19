@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Backend\UserController;
+
 
 Route::get('/', function () {
     $services = \App\Models\Service::where('is_active', true)->orderBy('order')->get();
@@ -60,3 +60,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/frontend/about/tentang.php';

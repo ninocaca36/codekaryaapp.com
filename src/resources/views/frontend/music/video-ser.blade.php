@@ -1,15 +1,19 @@
 <x-frontend-layout>
     <!-- Breadcrumbs -->
-    <section class="breadcrumbs-custom bg-primary-darker novi-bg novi-bg-img">
-        <div class="container">
-            <h2 class="breadcrumbs-custom-title">Karya Video Ser</h2>
+    <section class="breadcrumbs-custom bg-image context-dark bg-image-dark novi-bg novi-bg-img" data-preset='{"title":"Breadcrumbs Classic","category":"header","reload":false,"id":"breadcrumbs-classic"}'>
+        <div class="breadcrumbs-custom-inner">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-main">
+              <h6 class="breadcrumbs-custom-subtitle title-decorated">Karya</h6>
+              <h1 class="breadcrumbs-custom-title">Video Ser</h1>
+            </div>
             <ul class="breadcrumbs-custom-path">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="#">Karya</a></li>
-                <li class="active">Video Ser</li>
+              <li><a href="{{ url('/') }}">Home</a></li>
+              <li class="active">Video Ser</li>
             </ul>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- Video Feed -->
     <section class="section section-lg bg-gray-100 novi-bg novi-bg-img">

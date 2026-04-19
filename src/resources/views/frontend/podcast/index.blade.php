@@ -70,17 +70,20 @@
     </style>
 
     <!-- Breadcrumbs -->
-    <section class="breadcrumbs-custom bg-primary-darker novi-bg novi-bg-img">
-        <div class="container">
-            <h2 class="breadcrumbs-custom-title">Podcast & Streaming</h2>
+    <section class="breadcrumbs-custom bg-image context-dark bg-image-dark novi-bg novi-bg-img" data-preset='{"title":"Breadcrumbs Classic","category":"header","reload":false,"id":"breadcrumbs-classic"}'>
+        <div class="breadcrumbs-custom-inner">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-main">
+              <h6 class="breadcrumbs-custom-subtitle title-decorated">Podcast</h6>
+              <h1 class="breadcrumbs-custom-title">Podcast & Streaming</h1>
+            </div>
             <ul class="breadcrumbs-custom-path">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="#">Karya</a></li>
-                <li class="active">Podcast</li>
+              <li><a href="{{ url('/') }}">Home</a></li>
+              <li class="active">Podcast</li>
             </ul>
+          </div>
         </div>
-    </section>
-
+      </section>
     <section class="section section-lg bg-white">
         <div class="container">
             <div class="row row-fix mb-5">
@@ -127,13 +130,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h4 class="mb-4">Kategori Podcast</h4>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Teknologi</span>
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Bisnis</span>
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Hiburan</span>
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Edukasi</span>
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Kesehatan</span>
-                            <span class="badge badge-pill badge-light p-3 px-4 m-1">Gaya Hidup</span>
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Teknologi</a>
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Bisnis</a>
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Hiburan</a>
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Edukasi</a>
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Kesehatan</a>
+                            <a href="#" class="btn btn-outline-primary m-1 px-4 py-2" style="border-radius: 30px;">Gaya Hidup</a>
                         </div>
                     </div>
                 </div>
