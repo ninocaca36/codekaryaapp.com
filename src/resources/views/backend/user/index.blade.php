@@ -14,7 +14,7 @@
                     <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                     <div class="toggle-expand-content" data-content="pageMenu">
                         <ul class="nk-block-tools g-3">
-                            <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add User</span></a></li>
+                            <li class="nk-block-tools-opt"><a href="{{ route('users.create') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add User</span></a></li>
                         </ul>
                     </div>
                 </div><!-- .toggle-wrap -->
@@ -79,10 +79,28 @@
                                             <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                             <div class="dropdown-menu dropdown-menu-end">
                                                 <ul class="link-list-opt no-bdr">
-                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                                    <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit User</span></a></li>
+                                                    <li><a href="{{ route('users.show', $user->id) }}"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                                    <li><a href="{{ route('users.edit', $user->id) }}"><em class="icon ni ni-edit"></em><span>Edit User</span></a></li>
+                                                    @if(!$user->email_verified_at)
+                                                    <li>
+                                                        <a href="javascript:void(0)" class="text-success" onclick="document.getElementById('verify-user-{{ $user->id }}').submit();">
+                                                            <em class="icon ni ni-check-circle"></em><span>Verify Email</span>
+                                                        </a>
+                                                        <form id="verify-user-{{ $user->id }}" action="{{ route('users.verify', $user->id) }}" method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                    </li>
+                                                    @endif
                                                     <li class="divider"></li>
-                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete User</span></a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" class="text-danger" onclick="if(confirm('Are you sure you want to delete this user?')) { document.getElementById('delete-user-{{ $user->id }}').submit(); }">
+                                                            <em class="icon ni ni-trash"></em><span>Delete User</span>
+                                                        </a>
+                                                        <form id="delete-user-{{ $user->id }}" action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: none;">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                        </form>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

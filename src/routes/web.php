@@ -20,7 +20,8 @@ Route::get('/blog/{slug}', [\App\Http\Controllers\Frontend\BlogController::class
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/users', [\App\Http\Controllers\Backend\UserController::class, 'index'])->name('users.index');
+    Route::post('/users/{user}/verify', [\App\Http\Controllers\Backend\UserController::class, 'verify'])->name('users.verify');
+    Route::resource('users', \App\Http\Controllers\Backend\UserController::class);
     Route::resource('services', \App\Http\Controllers\Backend\ServiceController::class);
     Route::get('/visitors', [\App\Http\Controllers\Backend\VisitorController::class, 'index'])->name('visitors.index');
 
