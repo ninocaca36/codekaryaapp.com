@@ -65,7 +65,7 @@
                         <div class="plan-icon"><span class="mdi mdi-crown-outline"></span></div>
                         <h4 class="plan-title">CORPORATE</h4>
                         <div class="plan-price">
-                            <span class="currency">Rp</span>4.999k<span class="period">++</span>
+                            <span class="price-label">NEGOSIASI</span>
                         </div>
                     </div>
                     <div class="pricing-card-body">

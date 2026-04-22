@@ -101,7 +101,11 @@
                                     <em class="icon ni ni-user-alt"></em>
                                 </div>
                                 <div class="user-info d-none d-xl-block">
-                                    <div class="user-status user-status-unverified">Unverified</div>
+                                    @if(auth()->user()->email_verified_at)
+                                        <div class="user-status user-status-verified text-success">Verified</div>
+                                    @else
+                                        <div class="user-status user-status-unverified text-danger">Unverified</div>
+                                    @endif
                                     <div class="user-name dropdown-indicator">{{ auth()->user()->name ?? 'Guest' }}</div>
                                 </div>
                             </div>
@@ -146,3 +150,27 @@
         </div><!-- .nk-header-wrap -->
     </div><!-- .container-fliud -->
 </div>
+
+@if(session('success'))
+    <script>
+        window.addEventListener('load', function() {
+            NioApp.Toast('{{ session('success') }}', 'success', {position: 'top-right'});
+        });
+    </script>
+@endif
+
+@if(session('error'))
+    <script>
+        window.addEventListener('load', function() {
+            NioApp.Toast('{{ session('error') }}', 'error', {position: 'top-right'});
+        });
+    </script>
+@endif
+
+@if(session('info'))
+    <script>
+        window.addEventListener('load', function() {
+            NioApp.Toast('{{ session('info') }}', 'info', {position: 'top-right'});
+        });
+    </script>
+@endif
