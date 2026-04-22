@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="swiper-slide-text">
                         <div class="text-large">Hargai Setiap Karya Digital Anda</div>
-                        <p class="text-white" style="font-size: 20px;">Codekarya hadir untuk memberikan apresiasi nyata bagi setiap kreativitas yang lahir.</p>
+                        <p class="text-white" style="font-size: 20px;">Codekarya APP hadir untuk memberikan apresiasi nyata bagi setiap kreativitas yang lahir.</p>
                     </div>
                 </div>
             </div>

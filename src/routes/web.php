@@ -62,3 +62,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 require __DIR__.'/frontend/about/tentang.php';
+require __DIR__.'/frontend/about/aturan.php';
+require __DIR__.'/frontend/about/kontak.php';
