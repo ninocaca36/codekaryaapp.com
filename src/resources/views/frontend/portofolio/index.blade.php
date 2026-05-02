@@ -41,33 +41,38 @@
             @forelse($portfolios as $portfolio)
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="{{ $portfolio->link ?? '#' }}"><img class="thumbnail-light-image" src="{{ asset($portfolio->image) }}" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="{{ $portfolio->link ?? '#' }}">{{ $portfolio->title }}</a></h5>
+              <article class="thumbnail-light">
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset($portfolio->image) }}" alt="" width="270" height="300"/></div>
+                <h5 class="thumbnail-light-title">{{ $portfolio->title }}</h5>
               </article>
             </div>
             @empty
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-1-270x300.jpg') }}" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="#">Analysis & Research</a></h5>
+              <article class="thumbnail-light">
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-1-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <h5 class="thumbnail-light-title">Analysis & Research</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-2-270x300.jpg') }}" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="#">Online Marketing</a></h5>
+              <article class="thumbnail-light">
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-2-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <h5 class="thumbnail-light-title">Online Marketing</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-3-270x300.jpg') }}" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="#">Email Marketing</a></h5>
+              <article class="thumbnail-light">
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-3-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <h5 class="thumbnail-light-title">Email Marketing</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-4-270x300.jpg') }}" alt="" width="270" height="300"/></a>
-                <h5 class="thumbnail-light-title"><a href="#">Public Relations</a></h5>
+              <article class="thumbnail-light">
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-4-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <h5 class="thumbnail-light-title">Public Relations</h5>
               </article>
             </div>
             @endforelse

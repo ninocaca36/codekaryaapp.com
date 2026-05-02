@@ -54,14 +54,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-label" for="link">Link (URL)</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="url" class="form-control" id="link" name="link" value="{{ old('link', $portfolio->link ?? '') }}">
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label" for="order">Display Order</label>

@@ -30,7 +30,7 @@ class PortfolioController extends Controller
             'order' => 'integer',
         ]);
 
-        $data = $request->all();
+        $data = $request->except('_token');
 
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
@@ -58,7 +58,7 @@ class PortfolioController extends Controller
             'order' => 'integer',
         ]);
 
-        $data = $request->all();
+        $data = $request->except('_token');
 
         if ($request->hasFile('image')) {
             // Delete old image if it exists and is not a default/template image

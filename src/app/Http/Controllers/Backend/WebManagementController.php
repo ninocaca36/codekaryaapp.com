@@ -16,25 +16,34 @@ class WebManagementController extends Controller
 
     public function update(Request $request)
     {
-        $data = $request->except('_token');
+        $inputs = $request->except('_token');
 
-        foreach ($data as $key => $value) {
+        foreach ($inputs as $key => $value) {
+            // Check if the input is a file
             if ($request->hasFile($key)) {
-                $imageName = $key.'_'.time().'.'.$request->$key->extension();
-                $request->$key->move(public_path('frontend/images/settings'), $imageName);
-                $value = 'frontend/images/settings/'.$imageName;
-                
+                $file = $request->file($key);
+                $imageName = $key . '_' . time() . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path('frontend/images/settings'), $imageName);
+                $finalValue = 'frontend/images/settings/' . $imageName;
+
                 // Delete old image if exists
                 $oldSetting = WebSetting::where('key', $key)->first();
-                if ($oldSetting && $oldSetting->value && file_exists(public_path($oldSetting->value))) {
-                    unlink(public_path($oldSetting->value));
+                if ($oldSetting && $oldSetting->value && file_exists(public_path($oldSetting->value)) && !str_contains($oldSetting->value, 'frontend/images/')) {
+                    // Only delete if it's in the settings folder (don't delete template images)
+                    if (str_contains($oldSetting->value, 'settings/')) {
+                        unlink(public_path($oldSetting->value));
+                    }
                 }
+            } else {
+                $finalValue = $value;
             }
 
-            WebSetting::updateOrCreate(
-                ['key' => $key],
-                ['value' => $value]
-            );
+            if ($finalValue !== null) {
+                WebSetting::updateOrCreate(
+                    ['key' => $key],
+                    ['value' => $finalValue]
+                );
+            }
         }
 
         return redirect()->back()->with('success', 'Web settings updated successfully.');
