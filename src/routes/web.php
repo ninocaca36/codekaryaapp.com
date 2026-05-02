@@ -17,6 +17,7 @@ Route::get('/karya/podcast', [\App\Http\Controllers\FrontendPodcastController::c
 Route::get('/portofolio', [\App\Http\Controllers\Frontend\PortofolioController::class, 'index'])->name('frontend.portofolio.index');
 Route::get('/blog', [\App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
 Route::get('/blog/{slug}', [\App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
+Route::post('/ai/chat', [\App\Http\Controllers\ChatController::class, 'chat'])->name('ai.chat');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
