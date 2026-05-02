@@ -40,17 +40,20 @@
             <li class="nk-menu-heading">
                 <h6 class="overline-title text-primary-alt">Content Management</h6>
             </li><!-- .nk-menu-heading -->
-            <li class="nk-menu-item has-sub {{ Request::is('services*') ? 'active focus' : '' }}">
+            <li class="nk-menu-item has-sub {{ Request::is('services*') || Request::is('portfolios*') || Request::is('web-management*') ? 'active focus' : '' }}">
                 <a href="#" class="nk-menu-link nk-menu-toggle">
                     <span class="nk-menu-icon"><em class="icon ni ni-grid-alt-fill"></em></span>
-                    <span class="nk-menu-text">Services</span>
+                    <span class="nk-menu-text">Manajemen Web</span>
                 </a>
                 <ul class="nk-menu-sub">
                     <li class="nk-menu-item {{ Request::is('services*') ? 'active' : '' }}">
                         <a href="{{ route('services.index') }}" class="nk-menu-link"><span class="nk-menu-text">Services List</span></a>
                     </li>
-                    <li class="nk-menu-item">
-                        <a href="#" class="nk-menu-link"><span class="nk-menu-text">Add New Service</span></a>
+                    <li class="nk-menu-item {{ Request::is('portfolios*') ? 'active' : '' }}">
+                        <a href="{{ route('portfolios.index') }}" class="nk-menu-link"><span class="nk-menu-text">Portfolio List</span></a>
+                    </li>
+                    <li class="nk-menu-item {{ Request::is('web-management*') ? 'active' : '' }}">
+                        <a href="{{ route('web-management.index') }}" class="nk-menu-link"><span class="nk-menu-text">Web Settings</span></a>
                     </li>
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->

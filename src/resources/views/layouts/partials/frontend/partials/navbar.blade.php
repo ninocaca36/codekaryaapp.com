@@ -14,16 +14,14 @@
             <ul class="rd-navbar-nav">
               <li class="rd-nav-item {{ Request::is('/') ? 'active' : '' }}"><a class="rd-nav-link" href="{{ url('/') }}">Home</a>
               </li>
-              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Karya</a>
+              <li class="rd-nav-item"><a class="rd-nav-link" href="#">Services</a>
                 <ul class="rd-menu rd-navbar-dropdown">
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Musik</a></li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Film</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Karya Video Ser</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Ruang Karaoke</a></li>
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Podcast</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Film</a></li>
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Video Pendek</a></li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Semua Karya Digital</a></li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.music.index') }}">Karya Video Ser</a></li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.music.karaoke') }}">Ruang Karaoke</a></li>
-                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.podcast.index') }}">Podcast</a></li>
+                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.portofolio.index') }}">Portofolio</a></li>
                 </ul>
               </li>
               <li class="rd-nav-item"><a class="rd-nav-link" href="#">Jasa Aplikasi</a>
