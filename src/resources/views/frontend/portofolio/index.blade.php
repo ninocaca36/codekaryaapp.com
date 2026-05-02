@@ -42,7 +42,7 @@
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset($portfolio->image) }}" alt="" width="270" height="300"/></div>
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset($portfolio->image) }}" alt="" width="270" height="300" style="width: 270px; height: 300px; object-fit: cover;"/></div>
                 <h5 class="thumbnail-light-title">{{ $portfolio->title }}</h5>
               </article>
             </div>
@@ -50,28 +50,28 @@
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-1-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-1-270x300.jpg') }}" alt="" width="270" height="300" style="width: 270px; height: 300px; object-fit: cover;"/></div>
                 <h5 class="thumbnail-light-title">Analysis & Research</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-2-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-2-270x300.jpg') }}" alt="" width="270" height="300" style="width: 270px; height: 300px; object-fit: cover;"/></div>
                 <h5 class="thumbnail-light-title">Online Marketing</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-3-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-3-270x300.jpg') }}" alt="" width="270" height="300" style="width: 270px; height: 300px; object-fit: cover;"/></div>
                 <h5 class="thumbnail-light-title">Email Marketing</h5>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-4-270x300.jpg') }}" alt="" width="270" height="300"/></div>
+                <div class="thumbnail-light-media"><img class="thumbnail-light-image" src="{{ asset('frontend/images/service-thumbnail-4-270x300.jpg') }}" alt="" width="270" height="300" style="width: 270px; height: 300px; object-fit: cover;"/></div>
                 <h5 class="thumbnail-light-title">Public Relations</h5>
               </article>
             </div>
