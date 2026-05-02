@@ -56,7 +56,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/my-profile', [\App\Http\Controllers\Backend\UserProfileController::class, 'show'])->name('user.profile');
     Route::post('/my-profile/update', [\App\Http\Controllers\Backend\UserProfileController::class, 'update'])->name('user.profile.update');
 
+    Route::resource('teams', \App\Http\Controllers\Backend\TeamController::class);
     Route::resource('manage-blog', \App\Http\Controllers\Backend\BlogController::class)->names('blog');
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -69,3 +71,5 @@ require __DIR__.'/auth.php';
 require __DIR__.'/frontend/about/tentang.php';
 require __DIR__.'/frontend/about/aturan.php';
 require __DIR__.'/frontend/about/kontak.php';
+require __DIR__.'/frontend/about/team.php';
+

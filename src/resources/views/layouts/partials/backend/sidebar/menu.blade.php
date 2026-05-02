@@ -52,9 +52,13 @@
                     <li class="nk-menu-item {{ Request::is('portfolios*') ? 'active' : '' }}">
                         <a href="{{ route('portfolios.index') }}" class="nk-menu-link"><span class="nk-menu-text">Portfolio List</span></a>
                     </li>
+                    <li class="nk-menu-item {{ Request::is('teams*') ? 'active' : '' }}">
+                        <a href="{{ route('teams.index') }}" class="nk-menu-link"><span class="nk-menu-text">Team List</span></a>
+                    </li>
                     <li class="nk-menu-item {{ Request::is('web-management*') ? 'active' : '' }}">
                         <a href="{{ route('web-management.index') }}" class="nk-menu-link"><span class="nk-menu-text">Web Settings</span></a>
                     </li>
+
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->
             <!-- Analytics -->

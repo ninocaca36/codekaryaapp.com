@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Team extends Model
+{
+    protected $fillable = [
+        'name',
+        'role',
+        'image',
+        'description',
+        'facebook',
+        'twitter',
+        'instagram',
+        'linkedin',
+        'youtube',
+        'github',
+        'order',
+        'is_active',
+    ];
+}
