@@ -31,7 +31,7 @@
             </li>
             <li class="object-inline">
               <span class="icon icon-md mdi mdi-email text-primary"></span>
-              <a class="link-default" href="mailto:codekaryaapp@gmail.com">codekaryaapp@gmail.com</a>
+              <a class="link-default" href="mailto:info.codekaryaapp@gmail.com">info.codekaryaapp@gmail.com</a>
             </li>
           </ul>
         </div>

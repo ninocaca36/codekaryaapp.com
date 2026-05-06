@@ -39,7 +39,7 @@
                 <ul class="list-0">
                   <li>Bekasi, Jawa Barat, Indonesia</li>
                   <li><a class="link-default" href="tel:+6288973208501">+62 889-7320-8501</a></li>
-                  <li><a class="link-default" href="mailto:codekaryaapp@gmail.com">codekaryaapp@gmail.com</a></li>
+                  <li><a class="link-default" href="mailto:info.codekaryaapp@gmail.com">info.codekaryaapp@gmail.com</a></li>
                 </ul>
               </div>
             </div>

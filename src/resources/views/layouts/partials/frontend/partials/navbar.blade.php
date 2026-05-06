@@ -40,6 +40,7 @@
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.tentang-kami.index') }}">Tentang Kami</a></li>
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.aturan.index') }}">Aturan Main & Membership</a></li>
                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.aturan.web') }}">Aturan Pembuatan WEB</a></li>
+                   <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ route('frontend.client.web') }}">Client</a></li>
                 </ul>
               </li>
               <li class="rd-nav-item {{ Request::is('blog*') ? 'active' : '' }}"><a class="rd-nav-link" href="{{ route('frontend.blog.index') }}">Blog</a>

@@ -31,6 +31,7 @@ services:
     volumes:
       - ./src:/var/www
       - ./src/docker/nginx/conf.d/:/etc/nginx/conf.d/
+      - /etc/letsencrypt:/etc/letsencrypt
     networks:
       - codekarya-network
 
@@ -49,9 +50,15 @@ services:
         MYSQL_USER: ${DB_USERNAME:-codekarya_user}
         SERVICE_TAGS: dev
         SERVICE_NAME: mysql
+      volumes:
+        - db_data:/var/lib/mysql
       networks:
         - codekarya-network
 
 networks:
   codekarya-network:
     driver: bridge
+
+volumes:
+  db_data:
+    driver: local
