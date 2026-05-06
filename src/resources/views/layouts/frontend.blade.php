@@ -29,6 +29,7 @@
       @include('layouts.partials.frontend.partials.preloader')
     </div>
     <!-- Global Mailform Output-->
+    @include('layouts.partials.frontend.partials.chatbot')
     @include('layouts.partials.frontend.partials.scripts')
     @stack('scripts')
   </body>

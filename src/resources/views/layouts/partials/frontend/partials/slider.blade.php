@@ -24,7 +24,7 @@
                             <a href="https://wa.me/6281585831793?text=Halo%20Codekarya%2C%20saya%20ingin%20konsultasi%20mengenai%20pembuatan%20aplikasi/sistem%20informasi." target="_blank" class="btn btn-primary btn-lg">
                                 Konsultasi Gratis
                             </a>
-                            <a href="#portfolio" class="btn btn-outline-light btn-lg">
+                            <a href="{{ route('frontend.portofolio.index') }}" class="btn btn-outline-light btn-lg">
                                 Lihat Portfolio
                             </a>
                         </div>

@@ -14,8 +14,10 @@ Route::get('/', function () {
 Route::get('/karya/video-ser', [\App\Http\Controllers\FrontendMusicController::class, 'videoSer'])->name('frontend.music.index');
 Route::get('/karya/karaoke', [\App\Http\Controllers\FrontendMusicController::class, 'karaoke'])->name('frontend.music.karaoke');
 Route::get('/karya/podcast', [\App\Http\Controllers\FrontendPodcastController::class, 'index'])->name('frontend.podcast.index');
+Route::get('/portofolio', [\App\Http\Controllers\Frontend\PortofolioController::class, 'index'])->name('frontend.portofolio.index');
 Route::get('/blog', [\App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
 Route::get('/blog/{slug}', [\App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
+Route::post('/ai/chat', [\App\Http\Controllers\ChatController::class, 'chat'])->name('ai.chat');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
@@ -23,6 +25,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/users/{user}/verify', [\App\Http\Controllers\Backend\UserController::class, 'verify'])->name('users.verify');
     Route::resource('users', \App\Http\Controllers\Backend\UserController::class);
     Route::resource('services', \App\Http\Controllers\Backend\ServiceController::class);
+    Route::resource('portfolios', \App\Http\Controllers\Backend\PortfolioController::class);
+    Route::get('/web-management', [\App\Http\Controllers\Backend\WebManagementController::class, 'index'])->name('web-management.index');
+    Route::post('/web-management/update', [\App\Http\Controllers\Backend\WebManagementController::class, 'update'])->name('web-management.update');
     Route::get('/visitors', [\App\Http\Controllers\Backend\VisitorController::class, 'index'])->name('visitors.index');
 
     // Roles & Permissions
@@ -51,7 +56,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/my-profile', [\App\Http\Controllers\Backend\UserProfileController::class, 'show'])->name('user.profile');
     Route::post('/my-profile/update', [\App\Http\Controllers\Backend\UserProfileController::class, 'update'])->name('user.profile.update');
 
+    Route::resource('teams', \App\Http\Controllers\Backend\TeamController::class);
     Route::resource('manage-blog', \App\Http\Controllers\Backend\BlogController::class)->names('blog');
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -64,5 +71,5 @@ require __DIR__.'/auth.php';
 require __DIR__.'/frontend/about/tentang.php';
 require __DIR__.'/frontend/about/aturan.php';
 require __DIR__.'/frontend/about/kontak.php';
-require __DIR__.'/frontend/client.php';
+require __DIR__.'/frontend/about/team.php';
 
